@@ -12,7 +12,7 @@ print(set_2)
 frutas = set_1 | set_2
 print(frutas)
 
-# Adicionar
+# Agregar
 
 print(set_1.add("Melon"))
 print(set_1)

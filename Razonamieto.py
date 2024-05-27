@@ -5,6 +5,8 @@ def f1(lista):
 def f2(palabra):
 	return [palabra]
 
+# Abstraccion
+
 def f3(x, y):
 	return f1(x) + f2(y)
 
