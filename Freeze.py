@@ -1,10 +1,13 @@
 
 from pyrsistent import freeze, thaw
 
+# Datos iniciales
 datos = [[1, 2, 3], [3, 4, 5], {"a": 10, "b": 20}]
-print(datos)
+print("Estructura Original:\n", datos)
 
+# Congelar la estructura para hacerla inmutable
 datos_inmutables = freeze(datos)
-print(datos_inmutables)
+print("\nEstructura Inmutable:\n", datos_inmutables)
 
-print("Estructura Original:\n", thaw(datos_inmutables))
+# Descongelar la estructura para obtener la versión modificable
+print("\nEstructura Descongelada:\n", thaw(datos_inmutables))

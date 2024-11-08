@@ -1,7 +1,7 @@
 
+# Función simple que retorna 1
 def funcion_1():
-	x = 1
-	return x
+    return 1
 
 f1 = funcion_1()
 print(f1)
@@ -9,14 +9,11 @@ print(f1)
 assert f1 == 1
 print("Si")
 
-# Paradigma Funcional
-
+# Función con cierre que retorna 1 (paradigma funcional)
 def funcion_2():
-	x = 1
-	def interna():
-		return x
-
-	return interna
+    def interna():
+        return 1
+    return interna
 
 f2 = funcion_2()
 

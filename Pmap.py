@@ -1,14 +1,19 @@
 
 from pyrsistent import pmap, m
 
-diccionario_1 = pmap({"Hola": "a todos", "Arbol": "Verde"})
-print(diccionario_1)
+# Crear diccionario inmutable
+diccionario_inmutable = pmap({"Hola": "a todos", "Arbol": "Verde"})
+print(f"Diccionario inmutable: {diccionario_inmutable}")
 
-diccionario_2 = m(a = 1, b = 5)
-print(diccionario_2)
+# Crear diccionario mutable
+diccionario_mutable = m(a = 1, b = 5)
+print(f"Diccionario mutable: {diccionario_mutable}")
 
-print(diccionario_1["Hola"])
-print(diccionario_2["b"])
+# Acceder a valores
+print(f"\nValor de 'Hola' en diccionario 1: {diccionario_inmutable["Hola"]}")
+print(f"Valor de 'b' en diccionario 2: {diccionario_mutable["b"]}")
 
-print(diccionario_1.set("Arbol", "Rosado"))
-print(diccionario_1)
+# Modificar diccionario inmutable (crea una nueva versión)
+diccionario_inmutable_modificado = diccionario_inmutable.set("Arbol", "Rosado")
+print(f"\nDiccionario inmutable modificado: {diccionario_inmutable_modificado}")
+print(f"Diccionario original: {diccionario_inmutable}")
